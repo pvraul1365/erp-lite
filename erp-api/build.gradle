@@ -1,0 +1,13 @@
+plugins {
+	id 'org.springframework.boot'
+}
+
+dependencies {
+	implementation project(':erp-application')
+	implementation project(':erp-infrastructure')
+	implementation project(':erp-common')
+	implementation project(':erp-domain')
+
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+}
