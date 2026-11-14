@@ -14,6 +14,11 @@ allprojects {
 }
 
 subprojects {
+	ext {
+		mapstructVersion = '1.6.3'
+		lombokMapstructBindingVersion = '0.2.0'
+	}
+
 	apply plugin: 'java-library'
 	apply plugin: 'io.spring.dependency-management'
 
@@ -32,6 +37,14 @@ subprojects {
 	dependencies {
 		compileOnly 'org.projectlombok:lombok'
 		annotationProcessor 'org.projectlombok:lombok'
+
+		// Mapstruct
+		implementation "org.mapstruct:mapstruct:${mapstructVersion}"
+		annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+
+		// Binding Lombok and Mapstruct
+		implementation "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"
+		annotationProcessor "org.projectlombok:lombok-mapstruct-binding:${lombokMapstructBindingVersion}"
 
 		testCompileOnly 'org.projectlombok:lombok'
 		testAnnotationProcessor 'org.projectlombok:lombok'

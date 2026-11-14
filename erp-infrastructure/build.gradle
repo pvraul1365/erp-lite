@@ -2,4 +2,17 @@ dependencies {
 	implementation project(':erp-common')
 	implementation project(':erp-domain')
 	implementation project(':erp-application')
+
+	// PostgreSQL Driver
+	implementation 'org.postgresql:postgresql:42.7.8'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// MongoDB Driver
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+	// Redis Driver
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+	// Spring Boot Starter Cache
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
 }
